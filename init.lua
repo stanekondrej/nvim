@@ -32,4 +32,3 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 -- initialize lazy.nvim
 require("config.lazy")
-

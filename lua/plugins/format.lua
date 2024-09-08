@@ -23,10 +23,10 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			callback = function()
-				vim.cmd(":Format")
-			end,
+		vim.api.nvim_create_augroup("formatter", { clear = true })
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+			group = "formatter",
+			command = ":FormatWrite",
 		})
 	end,
 }
