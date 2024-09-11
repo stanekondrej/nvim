@@ -1,24 +1,21 @@
 return {
-	"williamboman/mason.nvim",
-	priority = 100,
-	dependencies = {
-		{
-			"williamboman/mason-lspconfig.nvim",
-			config = nil,
-		},
+	{
+		"williamboman/mason.nvim",
+		priority = 100,
+		opts = {},
 	},
-	config = function()
-		require("mason").setup({})
-		require("mason-lspconfig").setup({
+	{
+		"williamboman/mason-lspconfig.nvim",
+		opts = {
 			ensure_installed = {
 				"lua_ls",
 				"jsonls",
 				"rust_analyzer",
 				"svelte",
 				"cssls",
-				"tsserver",
+				"ts_ls",
 				"taplo",
 			},
-		})
-	end,
+		},
+	},
 }

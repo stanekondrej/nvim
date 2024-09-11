@@ -7,6 +7,9 @@ vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- disable line wrapping
+vim.opt.wrap = false
+
 -- search
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
@@ -21,9 +24,10 @@ vim.opt.undofile = true
 vim.opt.cursorline = true
 
 vim.opt.inccommand = "split"
+vim.opt.showmode = false -- we have lualine for this
 
 -- disable mouse
-vim.opt.mouse = nil
+vim.opt.mouse = {}
 
 -- keymaps
 vim.g.mapleader = " "

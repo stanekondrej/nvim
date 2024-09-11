@@ -4,8 +4,8 @@ return {
 		local caps = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 		require("go").setup({
 			lsp_cfg = {
-				capabilities = caps
-			}
+				capabilities = caps,
+			},
 		})
 
 		local group = vim.api.nvim_create_augroup("GoFormat", {})
@@ -17,7 +17,6 @@ return {
 			group = group,
 		})
 	end,
-	event = "CmdlineEnter",
 	ft = { "go", "gomod" },
 	build = ':lua require("go.install").update_all_sync()',
 }

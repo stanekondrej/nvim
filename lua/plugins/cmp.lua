@@ -6,6 +6,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"L3MON4D3/LuaSnip",
 	},
+	event = "InsertEnter",
 	config = function()
 		local cmp = require("cmp")
 
@@ -28,6 +29,7 @@ return {
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "luasnip" },
 				{ name = "lazydev", groupindex = 0 },
+				{ name = "codeium" }
 			}, { name = "buffer" }),
 			window = {
 				documentation = cmp.config.window.bordered(),

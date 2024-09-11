@@ -4,6 +4,6 @@ return {
 	opts = {
 		ensure_installed = { "javascript", "typescript", "lua", "rust", "json", "markdown", "toml", "html" },
 		highlight = { enable = true },
-		use_languagetree = true
+		use_languagetree = true,
 	},
 }

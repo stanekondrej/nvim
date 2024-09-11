@@ -1,3 +1,9 @@
+vim.api.nvim_create_augroup("formatter", { clear = true })
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	group = "formatter",
+	command = ":FormatWrite",
+})
+
 return {
 	"mhartington/formatter.nvim",
 	config = function()
@@ -21,12 +27,6 @@ return {
 					fts.html.prettierd,
 				},
 			},
-		})
-
-		vim.api.nvim_create_augroup("formatter", { clear = true })
-		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-			group = "formatter",
-			command = ":FormatWrite",
 		})
 	end,
 }
