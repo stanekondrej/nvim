@@ -26,6 +26,9 @@ return {
 				html = {
 					fts.html.prettierd,
 				},
+				rust = {
+					fts.rust.rustfmt,
+				},
 			},
 		})
 	end,
