@@ -4,7 +4,20 @@ return {
 	opts = {},
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "javascript", "typescript", "lua", "rust", "json", "markdown", "toml", "html" },
+			ensure_installed = {
+				"dockerfile",
+				"html",
+				"javascript",
+				"json",
+				"jsonc",
+				"lua",
+				"markdown",
+				"python",
+				"rust",
+				"toml",
+				"typescript",
+				"yaml",
+			},
 			sync_install = false,
 			auto_install = false,
 			ignore_install = {},

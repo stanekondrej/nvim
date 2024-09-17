@@ -32,6 +32,10 @@ vim.opt.mouse = {}
 -- keymaps
 vim.g.mapleader = " "
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.termguicolors = true
+
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 -- initialize lazy.nvim

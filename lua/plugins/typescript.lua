@@ -1,8 +1,7 @@
 return {
 	{ "nvim-lua/plenary.nvim", lazy = true },
 	{
-		"Exafunction/codeium.nvim",
-		enabled = false,
+		"pmizio/typescript-tools.nvim",
 		opts = {},
 	},
 }
