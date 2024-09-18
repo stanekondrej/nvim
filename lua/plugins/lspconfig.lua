@@ -38,7 +38,7 @@ return {
 				capabilities = cap,
 			})
 			l.ltex.setup({ capabilities = cap })
-			l.rust_analyzer.setup({ capabilities = cap })
+			--l.rust_analyzer.setup({ capabilities = cap })
 			l.svelte.setup({ capabilities = cap })
 			l.tailwindcss.setup({ capabilities = cap })
 			l.taplo.setup({ capabilities = cap })

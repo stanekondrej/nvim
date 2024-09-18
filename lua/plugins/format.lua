@@ -1,35 +1,18 @@
-vim.api.nvim_create_augroup("formatter", { clear = true })
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	group = "formatter",
-	command = ":FormatWrite",
-})
-
 return {
-	"mhartington/formatter.nvim",
-	config = function()
-		local fts = require("formatter.filetypes")
+	"stevearc/conform.nvim",
 
-		require("formatter").setup({
-			filetype = {
-				lua = {
-					fts.lua.stylua,
-				},
-				javascript = {
-					fts.javascript.prettierd,
-				},
-				typescript = {
-					fts.typescript.prettierd,
-				},
-				svelte = {
-					fts.svelte.prettierd,
-				},
-				html = {
-					fts.html.prettierd,
-				},
-				rust = {
-					fts.rust.rustfmt,
-				},
-			},
-		})
-	end,
+	opts = {
+		formatters_by_ft = {
+			lua = { "stylua" },
+			rust = { "rustfmt" },
+			javascript = { "prettierd" },
+			typescript = { "prettierd" },
+			svelte = { "prettierd" },
+			python = { "black", "isort" },
+		},
+		format_on_save = {
+			timeout_ms = 500,
+			lsp_format = "fallback",
+		},
+	},
 }
