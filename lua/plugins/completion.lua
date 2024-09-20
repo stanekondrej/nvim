@@ -9,11 +9,28 @@ return {
 			"hrsh7th/cmp-path",
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
+			{
+				"onsails/lspkind.nvim",
+				opts = {
+					symbol_map = {
+						text = "󰬴",
+						interface = "󰌆",
+					},
+				},
+			},
 		},
 		opts = function()
 			local cmp = require("cmp")
+			local lspkind = require("lspkind")
 
 			return {
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = 50,
+						ellipsis_char = "…",
+					}),
+				},
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body)

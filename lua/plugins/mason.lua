@@ -15,7 +15,7 @@ return {
 				"ltex",
 				"lua_ls",
 				"pyright",
-				--"rust_analyzer",
+				"rust_analyzer",
 				"svelte",
 				"tailwindcss",
 				"taplo",
