@@ -19,13 +19,35 @@ return {
 
 			local cap = require("cmp_nvim_lsp").default_capabilities()
 
-			--l.basedpyright.setup(cap())
-			l.pyright.setup({ capabilities = cap })
-			l.cssls.setup({ capabilities = cap })
-			l.docker_compose_language_service.setup({ capabilities = cap })
-			l.dockerls.setup({ capabilities = cap })
-			l.gopls.setup({ capabilities = cap })
-			l.html.setup({ capabilities = cap })
+			local servers = {
+				"arduino_language_server",
+				"cssls",
+				"docker_compose_language_service",
+				"dockerls",
+				"gopls",
+				"html",
+				"jsonls",
+				"pyright",
+				"rust_analyzer",
+				"svelte",
+				"tailwindcss",
+				"taplo",
+				"yamlls",
+			}
+
+			for _, value in pairs(servers) do
+				l[value].setup({ capabilities = cap })
+			end
+
+			l.ts_ls.setup({
+				single_file_support = false,
+				root_dir = l.util.root_pattern("package.json"),
+			})
+
+			l.denols.setup({
+				root_dir = l.util.root_pattern("deno.json", "deno.jsonc"),
+			})
+
 			l.lua_ls.setup({
 				settings = {
 					Lua = {
@@ -39,20 +61,13 @@ return {
 				},
 				capabilities = cap,
 			})
-			l.ltex.setup({ capabilities = cap })
-			l.rust_analyzer.setup({ capabilities = cap })
-			l.svelte.setup({ capabilities = cap })
-			l.tailwindcss.setup({ capabilities = cap })
-			l.taplo.setup({ capabilities = cap })
-			l.yamlls.setup({ capabilities = cap })
+
+			l.ltex.setup({
+				settings = {
+					language = "auto",
+				},
+			})
 		end,
-	},
-	{
-		{ "nvim-lua/plenary.nvim", lazy = true },
-		{
-			"pmizio/typescript-tools.nvim",
-			opts = {},
-		},
 	},
 	{
 		"folke/lazydev.nvim",

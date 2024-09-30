@@ -24,7 +24,6 @@ vim.opt.undofile = true
 vim.opt.cursorline = true
 
 vim.opt.inccommand = "split"
-vim.opt.showmode = false -- we have lualine for this
 
 -- disable mouse
 vim.opt.mouse = {}

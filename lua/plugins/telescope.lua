@@ -10,8 +10,8 @@ return {
 			{ "<leader>ff", builtin.find_files, desc = "Find a file" },
 			{ "<leader>fg", builtin.live_grep, desc = "Grep files" },
 			{ "<leader>fb", builtin.buffers, desc = "Search buffers" },
+			{ "<leader>fB", builtin.git_branches, desc = "Search branches" },
 			{ "<leader>fk", builtin.keymaps, desc = "Search keymaps" },
-			{ "<leader>b", builtin.git_branches, desc = "Search branches" },
 		}
 	end,
 	opts = {
