@@ -7,6 +7,8 @@ return {
 			rust = { "rustfmt" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
+			javascriptreact = { "prettierd" },
 			svelte = { "prettierd" },
 			python = { "black", "isort" },
 		},

@@ -2,8 +2,8 @@ return {
 	{
 		"folke/which-key.nvim",
 		keys = {
-			{ "gd", vim.lsp.buf.definition, desc = "Go to definition" },
-			{ "<F2>", vim.lsp.buf.rename, desc = "Rename symbol" },
+			{ "gd",   vim.lsp.buf.definition, desc = "Go to definition" },
+			{ "<F2>", vim.lsp.buf.rename,     desc = "Rename symbol" },
 		},
 	},
 	{
@@ -21,10 +21,12 @@ return {
 
 			local servers = {
 				"arduino_language_server",
+				"clangd",
 				"cssls",
 				"docker_compose_language_service",
 				"dockerls",
 				"gopls",
+				"hls",
 				"html",
 				"jsonls",
 				"pyright",
@@ -32,6 +34,7 @@ return {
 				"svelte",
 				"tailwindcss",
 				"taplo",
+				"texlab",
 				"yamlls",
 			}
 
@@ -60,12 +63,6 @@ return {
 					},
 				},
 				capabilities = cap,
-			})
-
-			l.ltex.setup({
-				settings = {
-					language = "auto",
-				},
 			})
 		end,
 	},

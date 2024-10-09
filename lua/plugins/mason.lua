@@ -9,10 +9,12 @@ return {
 		opts = {
 			ensure_installed = {
 				"arduino_language_server",
+				"clangd",
 				"cssls",
 				"denols",
 				"docker_compose_language_service",
 				"dockerls",
+				"hls",
 				"jsonls",
 				"ltex",
 				"lua_ls",
